@@ -104,8 +104,7 @@ body.details-active .story {
 }
 
 body.raised .header {
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16),
-      0px 2px 5px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16);
 }
 
 main {
@@ -199,9 +198,7 @@ main.loading {
   line-height: 40px;
 
   box-shadow:
-      0px 2px 5px 0px rgba(0, 0, 0, 0.06),
-      0px 2px 5px 0px rgba(0, 0, 0, 0.08),
-      0px 2px 7px 0px rgba(0, 0, 0, 0.10);
+      0px 2px 5px 0px rgba(0, 0, 0, 0.06);
 }
 
 .story-details {
@@ -233,18 +230,21 @@ main.loading {
   background: white;
   z-index: 2;
   box-shadow:
-      0px 2px 5px 0px rgba(0, 0, 0, 0.06),
-      0px 2px 5px 0px rgba(0, 0, 0, 0.08),
-      0px 2px 7px 0px rgba(0, 0, 0, 0.10);
-
+      0px 2px 5px 0px rgba(0, 0, 0, 0.06);
   overflow: hidden;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  will-change: transform, opacity;
 }
 
-.story-details * {
+.details-active .story-details {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+
+/*.story-details * {
   will-change: transform;
   transform: translateZ(0);
-}
+}*/
 
 .story-details__content {
   -webkit-flex: 1;
