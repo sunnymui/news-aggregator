@@ -229,8 +229,7 @@ main.loading {
   height: 100%;
   background: white;
   z-index: 2;
-  box-shadow:
-      0px 2px 5px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06);
   overflow: hidden;
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
   will-change: transform, opacity;
@@ -241,20 +240,13 @@ main.loading {
   opacity: 1;
 }
 
-/*.story-details * {
-  will-change: transform;
-  transform: translateZ(0);
-}*/
-
 .story-details__content {
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
-
   -webkit-overflow-scrolling: touch;
-
   padding: 0 16px 72px 72px;
 }
 
