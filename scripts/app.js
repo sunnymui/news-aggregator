@@ -113,9 +113,6 @@ APP.Main = (function() {
       toggleStory();
     });
 
-    var headerHeight = storyHeader.getBoundingClientRect().height;
-    storyContent.style.paddingTop = headerHeight + 'px';
-
     if (typeof kids === 'undefined')
       return;
 
@@ -185,6 +182,7 @@ APP.Main = (function() {
 
       // write the new story details to the dom
       storyDetail.innerHTML = storyDetailsHtml;
+      // storyDetails = storyDetail;
 
       commentsElement = storyDetails.querySelector('.js-comments');
       storyHeader = storyDetails.querySelector('.js-header');
@@ -195,9 +193,6 @@ APP.Main = (function() {
       closeButton.addEventListener('click', function() {
         toggleStory();
       });
-
-      var headerHeight = storyHeader.getBoundingClientRect().height;
-      storyContent.style.paddingTop = headerHeight + 'px';
 
       if (typeof kids === 'undefined')
         return;
